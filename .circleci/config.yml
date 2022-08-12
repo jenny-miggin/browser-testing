@@ -13,7 +13,7 @@ jobs:
     steps:
       - checkout
       - run:
-          command: whoami
+          command: id
       - run:
           name: Update NPM
           command: "sudo npm install -g npm"
@@ -48,7 +48,7 @@ jobs:
     steps:
       - checkout      
       - run:
-          command: whoami
+          command: id
       - run:
           name: Update NPM
           command: "sudo npm install -g npm"
