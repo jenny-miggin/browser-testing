@@ -34,11 +34,8 @@ jobs:
       #     name: sleep to troubleshoot
       #     command: sleep 3600
       - run:
-          name: sudo
-          command: sudo su 
-      - run:
           name: Run tests
-          command: npm run test
+          command: sudo npm run test
 
   build-cci:
     working_directory: ~/repo
