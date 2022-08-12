@@ -30,13 +30,15 @@ jobs:
           name: Run the application
           command: node server.js
           background: true
-      - run:
-          name: sleep to troubleshoot
-          command: sleep 3600
       # - run:
-      #     name: Run tests
-      #     command: npm run test
-
+      #     name: sleep to troubleshoot
+      #     command: sleep 3600
+      - run:
+          name: sudo
+          command: sudo su 
+      - run:
+          name: Run tests
+          command: npm run test
 
   build-cci:
     working_directory: ~/repo
