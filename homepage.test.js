@@ -20,7 +20,7 @@ test("Confirm text on page", async () => {
 }, 120000);
 
 test("Confirm form submission output", async () => {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({ headless: false });
     try {
         const page = await browser.newPage();
         await page.goto("http://localhost:5000");
