@@ -69,4 +69,3 @@ workflows:
   build-and-test:
     jobs:
       - build-container-agent
-      - build-cci
