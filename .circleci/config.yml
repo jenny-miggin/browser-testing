@@ -16,7 +16,9 @@ jobs:
           name: Update NPM
           command: "sudo npm install -g npm"
       - restore_cache:
-          key: dependency-cache-{{ checksum "package-lock.json" }}
+          keys: 
+            - dependency-cache-{{ checksum "package-lock.json" }}
+            - dependency-cache-
       - run:
           name: Install Dependencies
           command: npm install
@@ -30,9 +32,9 @@ jobs:
           name: Run the application
           command: node server.js
           background: true
-      # - run:
-      #     name: sleep to troubleshoot
-      #     command: sleep 3600
+      - run:
+          name: sleep to troubleshoot
+          command: sleep 3600
       - run:
           name: Run tests
           command: sudo npm run test
