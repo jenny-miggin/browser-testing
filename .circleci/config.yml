@@ -72,7 +72,7 @@ jobs:
           command: apt list --installed 
       - run:
           name: Run tests
-          command: xvfb-run npm run test
+          command: npm run test
 
 workflows:
   build-and-test:
