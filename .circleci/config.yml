@@ -37,6 +37,9 @@ jobs:
       - run:
           name: sleep to troubleshoot
           command: sleep 3600
+      - run: 
+          name: list packages
+          command: apt list --installed 
       - run:
           name: Run tests
           command: sudo npm run test
@@ -67,6 +70,9 @@ jobs:
           name: Run the application
           command: node server.js
           background: true
+      - run: 
+          name: list packages
+          command: apt list --installed 
       - run:
           name: Run tests
           command: npm run test
