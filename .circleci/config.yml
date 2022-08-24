@@ -9,6 +9,7 @@ jobs:
     working_directory: ~/repo
     docker:
       - image: cimg/node:16.13-browsers
+        entrypoint: /docker-entrypoint.sh
     resource_class: runner-jmi/container-agent-runner
     steps:
       - checkout
@@ -45,6 +46,7 @@ jobs:
     working_directory: ~/repo
     docker:
       - image: cimg/node:16.13-browsers
+        entrypoint: /docker-entrypoint.sh
     steps:
       - checkout      
       - run:
